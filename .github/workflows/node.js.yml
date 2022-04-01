@@ -27,8 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - uses: actions/setup-chromedriver@v1.0.7
-    - name: setup-chromedriver
- # uses: nanasess/setup-chromedriver@cc57e407ab3004f399e5452ae6ee2eeeeaaa8da4
+    - name: setup-chromedriver ${{ matrix.node-version }}
       uses: nanasess/setup-chromedriver@v1.0.7
       with:
        chromedriver-version: 100
