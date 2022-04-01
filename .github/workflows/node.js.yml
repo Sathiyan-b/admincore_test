@@ -28,10 +28,9 @@ jobs:
         cache: 'npm'
     - uses: actions/setup-chromedriver@v1.0.7
     - name: setup-chromedriver
-  # You may pin to the exact commit or the version.
  # uses: nanasess/setup-chromedriver@cc57e407ab3004f399e5452ae6ee2eeeeaaa8da4
+      uses: nanasess/setup-chromedriver@v1.0.7
       with:
-    # The chromedriver version to install
        chromedriver-version: 100
     - run: npm ci
     - run: npm run init
