@@ -26,11 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - uses: actions/setup-chromedriver@v1.0.7
-    - name: setup-chromedriver ${{ matrix.node-version }}
-      uses: nanasess/setup-chromedriver@v1.0.7
+    - uses: actions/checkout@v2
+    - uses: nanasess/setup-chromedriver@v1
       with:
-       chromedriver-version: 100
+    # Optional: do not specify to match Chrome's version
+        chromedriver-version: '100'
     - run: npm ci
     - run: npm run init
+    - run: npm run chromedriver
     - run: npm run e2e --if-present
+    
