@@ -33,6 +33,5 @@ jobs:
         chromedriver-version: '100'
     - run: npm ci
     - run: npm run init
-    - run: npm run chromedriver
     - run: npm run e2e --if-present
     
