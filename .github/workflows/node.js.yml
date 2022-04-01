@@ -32,6 +32,5 @@ jobs:
     # Optional: do not specify to match Chrome's version
         chromedriver-version: 100.0.4896.60
     - run: npm ci
-    - run: npm run init
     - run: npm run e2e --if-present
     
